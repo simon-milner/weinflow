@@ -1,0 +1,279 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Lato;
+  font-size: 18px;
+}
+
+
+body {
+    margin: 0 auto;
+    /*overflow: hidden;*/   
+    display: block;
+    align-items: center;
+    justify-content: center;
+    /*height: 100vh;*/
+    font: 1em comic sans ms, sans-serif;
+    /*background: #000;*/
+  }
+
+  .btn{/*dent around button*/
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: rgba(3, 169, 244, 0.54);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    background: #f7f7f7;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.08);
+}
+.btn .fa {/*Button itself*/
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    vertical-align: middle; 
+    left: 10px;
+    top: 9px;
+    border-radius: 50%;
+    font-size: 40px;
+    background-image: -webkit-linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+    background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #b5b5b5;
+  }
+  
+.btn .fa:active{
+    background-image: -webkit-linear-gradient(#efefef 0%, #d6d6d6 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #d8d8d8;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed');
+
+.wrapper
+{ 
+  padding: 20px;     
+} 
+
+
+@keyframes shadow-pulse-big
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 200px rgba(0, 0, 0, 0);
+  }
+}
+
+/*
+#container 
+  {
+    margin-top: 100px;
+    position: absolute;
+    display: block;
+    top: 0; left: 0; bottom: 0; right: 0;
+}*/
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr;
+  grid-template-rows: 30px 300px 1fr 1fr 1fr 1fr 1fr 1fr 30px;
+}
+
+#example3 {
+  grid-area: 2/2/span 1/span 1;
+  position: relative;
+  padding: 20px;
+  width: 250px;
+  height: 250px;
+  font: 13px/130px 'Barlow Semi Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
+  background: rgba(30, 144, 255, 0.6);
+  border-radius: 50%;
+  animation: shadow-pulse-big 4s infinite cubic-bezier(0.19, 0.7, 0.5, 1); 
+  animation-play-state: running;
+}
+
+#div1 {
+  grid-area: 4/2/span 1/span 1;
+  text-align: center;
+}
+
+#div2 {
+  grid-area: 3/2/span 1/span 1;
+  text-align: center;
+}
+
+#div3 {
+  grid-area: 4/2/span 1/span 1;
+  text-align: center;
+}
+
+#item5 {
+  grid-area: 9/2/span 3/span 3;
+  text-align: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+span {
+  text-align: center; 
+}
+
+#results1 {
+  grid-area: 6/2/span 1/span 1;
+  text-align: center;
+}
+
+#results2 {
+  grid-area: 7/2/span 1/span 1;
+  text-align: center;
+}
+
+#results3 {
+  grid-area: 8/2/span 1/span 1;
+  text-align: center;
+}
+
+#div-hover {
+  grid-area: 9/2/span 3/span 3;
+  text-align: center;
+}
+
+#div-hover {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+}
+
+#div-hover:hover {
+  -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+  animation-play-state: paused;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+
+
+
+/*
+#example3
+{
+  grid-area: 1/2/span 1/span 1;
+  margin: 0 auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  font: 13px/130px 'Barlow Semi Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
+  background: rgba(30, 144, 255, 0.6);
+  border-radius: 50%;
+  animation: shadow-pulse-big 4s infinite cubic-bezier(0.19, 0.7, 0.5, 1); 
+  animation-play-state: running;
+}
+
+/*
+// #example3 .paused {
+//   animation-play-state: paused;
+}*/
+
+.fa {
+  margin: 0 auto;
+  padding: 100px 0 0 0;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
+
+
+.fa-beat {
+  animation:fa-beat 5s ease infinite;
+}
+
+.div1 {
+  grid-area: 3/3;
+}
+
+
+/*
+.div2 {
+  margin: 50px;
+  position: relative;
+  
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
+
+p {
+  margin-top: 190px;
+}
+
+#results1 {
+  margin: 0 auto;
+  position: absolute;
+  padding: 200px;
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
+
+#results2 {
+  margin: 0 auto;
+  position: absolute;
+  padding: 220px;
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
+
+#results3 {
+  margin: 0 auto;
+  position: absolute;
+  padding: 240px;
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}*/
+
+
